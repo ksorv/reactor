@@ -38,5 +38,13 @@ module.exports = {
     new InterpolateHtmlPlugin(HTMLWebpackPlugin, { PUBLIC_URL: publicURL }),
   ],
 
+  devServer: {
+    compress: true,
+    hot: true,
+    open: true,
+    clientLogLevel: "silent",
+    port: 3000,
+  },
+
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
 };
